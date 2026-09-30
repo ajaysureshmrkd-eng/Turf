@@ -1,0 +1,70 @@
+#api call for admin user
+
+###
+POST http://127.0.0.1:8000/user/admin/
+Content-Type: application/json
+
+
+{
+    "username":"achu",
+    "email":"achu@gamil.com",
+    "password":"achu"
+}
+
+# api call for listing
+
+###
+GET http://127.0.0.1:8000/booking/
+Accept: application/json
+Authorization: Basic achu:achu
+
+# api call for adding
+
+###
+POST http://127.0.0.1:8000/booking/
+Content-Type: application/json
+Authorization: Basic achu:achu
+
+{
+    "name":"abhiii",
+    "location":"mkd",
+    "phone":"743485430",
+    "fee":"-1200"
+}
+
+#api call for fetching for details
+
+###
+GET http://127.0.0.1:8000/booking/2/
+Accept: application/json
+Authorization: Basic achu:achu
+
+
+#api call for update
+
+###
+PUT http://127.0.0.1:8000/booking/2/
+Content-Type: application/json
+Authorization: Basic achu:achu
+
+{
+   "name":"abhi",
+    "location":"pkd",
+    "phone":"6574843343",
+    "fee":"1500" 
+}
+
+# api call for delete
+
+###
+DELETE http://127.0.0.1:8000/booking/1/
+Accept: application/json
+
+
+
+
+#api call for listing
+
+###
+GET  http://127.0.0.1:8000/slotbookings/
+Accept: application/json
