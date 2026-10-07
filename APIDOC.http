@@ -29,13 +29,13 @@ Authorization: Basic achu:achu
     "name":"abhiii",
     "location":"mkd",
     "phone":"743485430",
-    "fee":"-1200"
+    "fee":"1200"
 }
 
 #api call for fetching for details
 
 ###
-GET http://127.0.0.1:8000/booking/2/
+GET http://127.0.0.1:8000/booking/5/
 Accept: application/json
 Authorization: Basic achu:achu
 
@@ -43,12 +43,12 @@ Authorization: Basic achu:achu
 #api call for update
 
 ###
-PUT http://127.0.0.1:8000/booking/2/
+PUT http://127.0.0.1:8000/booking/4/
 Content-Type: application/json
 Authorization: Basic achu:achu
 
-{
-   "name":"abhi",
+{  
+   "name":"achu",
     "location":"pkd",
     "phone":"6574843343",
     "fee":"1500" 
@@ -68,3 +68,88 @@ Accept: application/json
 ###
 GET  http://127.0.0.1:8000/slotbookings/
 Accept: application/json
+
+
+
+
+=======================================
+
+#booking_v2
+
+# api call for adding
+
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+    "username":"user",
+    "email":"user@gmail.com",
+    "password":"user@123"
+}
+
+
+=====================================
+
+
+#api call for listing
+
+###
+GET  http://127.0.0.1:8000/v2/booking/turfbooking/
+Accept: application/json
+Authorization: Basic user:user@123
+
+# api call for adding
+
+###
+POST  http://127.0.0.1:8000/v2/booking/turfbooking/
+Content-Type: application/json
+Authorization: Basic user:user@123
+
+{
+    "team_name":"royal",
+    "turf":4,
+    "phone_number":"12345678",
+    "email":"royal@gmail.com",
+    "date":"2026-10-10",
+    "start_time":"16:00:00",
+    "match_duration":"01:00:00"
+
+}
+
+
+#api call for retrieve
+
+###
+GET http://127.0.0.1:8000/v2/booking/turfbooking/2/
+Accept: application/json
+Authorization: Basic user:user@123
+
+
+# api call for update
+
+###
+PUT http://127.0.0.1:8000/v2/booking/turfbooking/2/
+Content-Type: application/json
+Authorization: Basic user:user@123
+
+{
+  "id": 2,
+  "team_name": "barcelona",
+  "phone_number": "12345678",
+  "email": "barcelona@gmail.com",
+  "date": "2026-10-10",
+  "start_time": "15:00:00",
+  "end_time": "16:00:00",
+  "match_duration": "01:00:00",
+  "turf": 4
+}
+
+
+# api call for delete
+
+###
+DELETE http://127.0.0.1:8000/v2/booking/turfbooking/3/
+Accept: application/json
+Authorization: Basic user:user@123
+
